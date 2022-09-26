@@ -1,0 +1,28 @@
+{
+    "name": "skyracer2012/iservsocialiteprovider",
+    "description": "IServ OAuth2 Provider for Laravel Socialite",
+    "license": "MIT",
+    "keywords": [
+        "iserv",
+        "laravel",
+        "oauth",
+        "provider",
+        "socialite"
+    ],
+    "authors": [
+        {
+            "name": "skyracer2012",
+            "email": "iservgithub@hurensohn.dev"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*",
+        "socialiteproviders/manager": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SocialiteProviders\\IServ\\": ""
+        }
+    }
+}
