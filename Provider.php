@@ -22,7 +22,24 @@ class Provider extends AbstractProvider
 
     protected $scopeSeparator = ' ';
 
-    public function __construct() {
+    /**
+     * Create a new provider instance.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  string  $clientId
+     * @param  string  $clientSecret
+     * @param  string  $redirectUrl
+     * @param  array  $guzzle
+     * @return void
+     */
+    public function __construct(Request $request, $clientId, $clientSecret, $redirectUrl, $guzzle = [])
+    {
+        $this->guzzle = $guzzle;
+        $this->request = $request;
+        $this->clientId = $clientId;
+        $this->redirectUrl = $redirectUrl;
+        $this->clientSecret = $clientSecret;
+
         //Set the scope based on the config
         $this->setScopes(config('services.iserv.scopes', $this->scopes));
     }
