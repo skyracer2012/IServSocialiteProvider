@@ -16,6 +16,12 @@ Please see the [Base Installation Guide](https://socialiteproviders.com/usage/),
   'client_id' => env('ISERV_OID_CLIENT_ID'),
   'client_secret' => env('ISERV_OID_CLIENT_SECRET'),
   'redirect' => env('ISERV_OID_REDIRECT_URL'),
+  'scopes' => [
+    'openid',
+    'profile',
+    'email',
+    'uuid'
+  ],
 ]
 ```
 
