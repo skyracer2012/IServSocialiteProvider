@@ -13,14 +13,19 @@ class Provider extends AbstractProvider
     /**
      * {@inheritdoc}
      */
-    protected $scopes = config('services.iserv.scopes', [
+    protected $scopes = [
         'openid',
         'profile',
         'email',
-        'uuid',
-    ]);
+        'uuid'
+    ];
 
     protected $scopeSeparator = ' ';
+
+    public function __construct() {
+        //Set the scope based on the config
+        $this->setScopes(config('services.iserv.scopes', $this->scopes));
+    }
 
     /**
      * {@inheritdoc}
