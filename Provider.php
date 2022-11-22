@@ -2,6 +2,7 @@
 
 namespace SocialiteProviders\IServ;
 
+use Illuminate\Http\Request;
 use GuzzleHttp\RequestOptions;
 use SocialiteProviders\Manager\OAuth2\AbstractProvider;
 use SocialiteProviders\Manager\OAuth2\User;
